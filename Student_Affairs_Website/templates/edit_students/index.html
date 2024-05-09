@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={% static "css/add_announcement/style.css" %}>
+    <link rel="stylesheet" href={% static 'css/main/style.css' %}>
+    <link rel="stylesheet" href={% static 'css/main/all.min.css' %}>
+    <link rel="stylesheet" href={% static 'css/all_students/style.css' %}>
+    <link rel="stylesheet" href={% static 'css/edit_students/style.css' %}>
+    <link rel="stylesheet" href={% static "css/main/popup.css" %} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;700;800&display=swap"
+        rel="stylesheet" />
+    <title>Edit Students</title>
+</head>
+
+<body>
+    {% include "includes/nav.html" %}
+    <div class="students">
+        <div class="container">
+            <div class="search">
+                <input type="text" placeholder="Search for active students" id="search" />
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>GPA</th>
+                        <th>Gender</th>
+                        <th>Level</th>
+                        <th>Status</th>
+                        <th>Department</th>
+                        <th>E-mail</th>
+                        <th>Date of Birth</th>
+                        <th>Mobile Number</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="body">
+                    {% if students %}
+                    {% for s in students %}
+                    <tr>
+                        <td class="id">{{ s.id}}</td>
+                        <td class="name">{{ s.name}}</td>
+                        <td class="gpa">{{ s.gpa}}</td>
+                        <td class="gender">{{ s.gender}}</td>
+                        <td class="level">{{ s.level}}</td>
+                        <td class="status">Active</td>
+                        <td class="dep">{{ s.Department}}</td>
+                        <td class="email">{{ s.email}}</td>
+                        <td class="birth">{{ s.date_of_birth|date:"d/m/Y"}}</td>
+                        <td class="number">{{ s.mobile_number}}</td>
+                        <td><i class="fa-solid fa-pen update"></i></td>
+                        <td><i class="fa-solid fa-trash delete"></i></td>
+                    </tr>
+                    {% endfor %}
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% include "../includes/popup.html" %}
+    {% include "../includes/add_announcement.html" %}
+    <script src={% static 'scripts/main/announcement.js' %}></script>
+    <script src={% static 'scripts/edit_students/main.js' %}></script>
+    <script src={% static 'scripts/main/main.js' %}></script>
+
+
+</body>
+
+</html>

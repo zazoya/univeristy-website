@@ -1,0 +1,85 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    /* background: linear-gradient(135deg, #8db6d7, #7f7d80); */
+    /* background: linear-gradient(135deg, #a7d8ff, #d9d4dc); */
+}
+.head {
+    /* background-color: #49444471; */
+    background-color: #daf2ff;
+    font-size: 40px;
+    width: 75%;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* margin-bottom: 10px; */
+    /* margin-left: 150px; */
+    /* margin-top: 10px; */
+    /* margin-right: 150px; */
+    margin: 25px auto;
+    border-radius: 40px;
+    transition: transform 0.5s;
+}
+
+.head1,
+.head2,
+.head3,
+.head4,
+.head5,
+.head6,
+.head7 {
+    background-color: rgba(255, 255, 255, 0.832);
+    background: linear-gradient(135deg, #a7d8ff, #d9d4dc);
+    font-size: 20px;
+    padding: 25px;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    transition: transform 0.5s;
+}
+.maintenance {
+    background: linear-gradient(135deg, #ffee47, #ffc8d4);
+}
+.head:hover {
+    transform: translateY(-10px);
+}
+.head1:hover {
+    transform: translateY(-10px);
+}
+.head2:hover {
+    transform: translateY(-10px);
+}
+.head3:hover {
+    transform: translateY(-10px);
+}
+.head4:hover {
+    transform: translateY(-10px);
+}
+.head5:hover {
+    transform: translateY(-10px);
+}
+.head6:hover {
+    transform: translateY(-10px);
+}
+.head7:hover {
+    transform: translateY(-10px);
+}
+.container {
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 686px) {
+    .head {
+        font-size: 32px;
+    }
+}
+@media (max-width: 515px) {
+    .head {
+        font-size: 24px;
+        padding: 20px 0;
+    }
+}

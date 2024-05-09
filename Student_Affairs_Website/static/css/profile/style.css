@@ -1,0 +1,125 @@
+#firstname {
+    cursor: pointer;
+    pointer-events: none;
+}
+form {
+    background-color: #eff5fe;
+}
+div .profile-image {
+    width: 200px;
+    margin: 5px 100px 5px 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    float: left;
+    vertical-align: top;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+    border-radius: 50%;
+}
+.pass-req {
+    font-weight: 600;
+    padding-top: 20px;
+    color: #aeb0b4 !important;
+}
+.currunt-data {
+    text-align: center;
+    width: 50%;
+}
+label {
+    padding-left: 50px;
+    padding-top: 17px;
+    height: 65px;
+    color: #2196f3;
+    margin-right: 10px;
+    margin-left: 50px;
+    display: block;
+}
+hr {
+    border-color: #2196f3;
+    margin: 25px;
+}
+form input,
+select {
+    display: block;
+    margin-left: 100px;
+    width: 55%;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+    background-color: #ffffff;
+    display: inline-block;
+    margin: 20px 20px 20px 60px;
+    background-clip: padding-box;
+    border: 1px solid #eef0f3;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.current-data {
+    padding-left: 200px;
+    padding: 10px;
+}
+.name,
+.city,
+.position,
+.address,
+.mobile {
+    padding: 14px;
+    color: black;
+}
+.button {
+    color: #2196f3;
+    margin-left: 34%;
+    margin-top: 150px;
+    height: 50px;
+    /* width: 400px; */
+    font-size: 20px;
+    padding-left: 0px;
+    cursor: pointer;
+}
+.button:hover {
+    border-color: black;
+    border-width: 2.5px;
+}
+.pass-inputs {
+    margin-left: 0px;
+    width: 50%;
+    float: left;
+}
+.pass-reqs {
+    width: 50%;
+    margin-left: 50%;
+}
+@media (max-width: 769px) {
+}
+@media (max-width: 769px) {
+    .current-data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pass {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pass-reqs {
+        margin: 0;
+    }
+    label {
+        padding: 15px 0px;
+        width: 150px;
+        margin-left: 20px;
+    }
+    input {
+        margin: 0 18%;
+    }
+    .button {
+        margin: 100px 75px 50px;
+    }
+}
+.form-row {
+}

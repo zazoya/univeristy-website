@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href={% static "css/add_announcement/style.css" %}>
+        <link rel="stylesheet" href={% static "css/main/popup.css" %}>
+        <link rel="stylesheet" href="{%static "css/main/all.min.css" %}"> 
+        <link rel="stylesheet" href="{%static "css/main/style.css" %}"> 
+        <link rel="stylesheet" href="{%static "css/all_students/style.css" %}"> 
+        <link rel="stylesheet" href="{%static "css/register_department/style.css" %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <meta name="viewport" content="width=device-width , initial-scale=1" />
+        <title>Register Departments</title>
+    </head>
+
+    <body>
+        {% include "../includes/nav.html" %}
+        <div class="container">
+            <h1>Register Department</h1>
+            <div class="search">
+                <form>
+                    <input
+                        type="text"
+                        placeholder="Search For Student By Name"
+                        id="search"
+                        class="name"
+                    />
+                    <div class="buttons">
+                        <button type="button" id="name">
+                            Search By Student Name
+                        </button>
+                        <button type="button" id="id">
+                            Search By Student ID
+                        </button>
+                    </div>
+                    <div class="departments">
+                        <ul>
+                            <li>
+                                <span class="menu">Departments</span>
+                                <i class="fa-solid fa-sort-down"></i>
+                                <ul class="drop-down">
+                                    <li class="dep" id="AI">AI</li>
+                                    <li class="dep" id="CS">CS</li>
+                                    <li class="dep" id="DS">DS</li>
+                                    <li class="dep" id="IS">IS</li>
+                                    <li class="dep" id="IT">IT</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <select name="Departments">
+                    <label>Departments</label>
+                    <option value=" SelectDepartment">Select Department</option>
+                    <option value="IS">IS</option>
+                    <option value="CS">CS</option>
+                    <option value="AI">AI</option>
+                    <option value="DS">DS</option>
+                </select> -->
+                    <!-- <input type="submit"> -->
+                    <button type="button" id="submit">Submit</button>
+                </form>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Student ID</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody id="body">
+                </tbody>
+            </table>
+        </div>
+            {% include "../includes/add_announcement.html" %}
+            {% include "../includes/popup.html" %}
+        <script src={% static 'scripts/main/announcement.js' %}></script>
+        <script src={% static 'scripts/register_department/main.js' %}></script>
+        <script src={% static 'scripts/main/main.js' %}></script>
+    </body>
+</html>

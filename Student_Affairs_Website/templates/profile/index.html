@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/profile/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/main/all.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/main/style.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;700;800&display=swap" rel="stylesheet">
+    <title>Profile</title>
+</head>
+
+<body>
+    {% include 'includes/nav.html'%}
+    <form>
+        <div class="container">
+            <div class="current-data">
+                <p class="profile-image"><img src="{% static 'imgs/profile_img.jpg'%}" height="200px" width="200px"></p>
+                <div class="data">
+                    <h4 class="name">Malak Tamer</h4>
+                    <p class="city"><span>Giza, Egypt</span></p>
+                    <p class="position"><span> Head of student affairs</span></p>
+                    <p class="address"><span>Address: El Mostakbal, Sheikh Zayed</span></p>
+                    <p class="mobile"><span>Mobile: 010 1234 5678</span></p>
+                </div>
+            </div>
+            <hr>
+            <div class="form-row">
+                <label for="firstname">First name</label>
+                <input class="input" type="text" id="firstname" value="Malak" name="First name" />
+                <i class="fa-solid fa-pen" id="edit"></i>
+            </div>
+            <div class="form-row">
+                <label for="lastname">Last name</label>
+                <input class="input" type="text" id="lastname" value="Tamer" name="Last name" />
+            </div>
+            <div class="form-row">
+                <label for="input Email">Email</label>
+                <input class="input" type="email" id="input Email" value="Malak@gmail.com" name="Email" />
+            </div>
+            <div class="form-row">
+                <label for="input Mobile">Mobile</label>
+                <input class="input" type="mobile" id="input mobile" value="010 1234 5678" name="Mobile" />
+            </div>
+            <div class="form-row">
+                <label for="inputAddress5">Address</label>
+                <input class="input" type="text" id="input Address" value="El mostakbal, Sheikh zayed" name="Address" />
+            </div>
+            <div>
+                <div class="form-row">
+                    <label for="input city">City</label>
+                    <select class="input" id="input city" name="City">
+                        <option selected="">Select your city:</option>
+                        <option>Cairo</option>
+                        <option>Giza</option>
+                        <option>Alexandria</option>
+                        <option>Banha</option>
+                        <option>El Mansoura</option>
+                        <option>Tanta</option>
+                        <option>Ismailia</option>
+                        <option>Aswan</option>
+                        <option>Luxour</option>
+                        <option>Damanhour</option>
+                        <option>Port saied</option>
+
+
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="input Zip code">Zip code</label>
+                    <input class="input" type="text" id="input Zip" value="12654" name="Zip code">
+                </div>
+            </div>
+            <hr />
+
+            <div class="pass">
+
+                <div class="pass-inputs">
+                    <div class="form-row">
+                        <label for="input Password">Old Password</label>
+                        <input class="input" type="password" id=" Password" name="Old password" />
+                    </div>
+                    <div class="form-row">
+                        <label for="input Password">New Password</label>
+                        <input class="input" type="password" name="New password" />
+                    </div>
+                    <div class="form-row">
+                        <label for="input Password">Confirm Password</label>
+                        <input class="input" type="password" name=" Confirm password" />
+                    </div>
+                </div>
+                <div class="pass-reqs">
+                    <div class="pass-req">
+                        <p class="pass-req">Password requirements </p>
+                        <p class="pass-req">To create a new password,you have to follow the following
+                            requirements:</p>
+                        <ul class="pass-req">
+                            <li>-You must enter at least 8 characters.</li>
+                            <li>-No special characters are allowed.</li>
+                            <li>-At least add one number.</li>
+                            <li>-Can’t be the same as a previous password.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="submit">
+                <input type="submit" value="save changes" class="button">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

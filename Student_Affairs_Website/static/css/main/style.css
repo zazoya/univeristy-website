@@ -1,0 +1,177 @@
+/* Golabl rules */
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    outline: 0;
+}
+:root{
+    --main-color: #2196f3;
+    --transition : 0.3s;
+}
+body{
+    font-family: "Cairo", sans-serif;
+}
+.container{
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+input::placeholder{
+    color: white !important;
+    /* color: internal-light-dark(black, white); */
+}
+input::-webkit-input-placeholder {
+    color: white !important;
+}
+    input:-moz-placeholder { /* Firefox 18- */
+    color: white !important;  
+}
+    input::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;  
+}
+    input:-ms-input-placeholder {  
+    color: white !important;  
+}
+@media (min-width: 576px){
+.container {
+    width: 540px;
+}
+}
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .container{
+    width: 750px;
+}  }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .container{
+    width: 972px;
+} }
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { .container{
+    width: 1172px;
+}  }
+a{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+li{
+    list-style: none;
+    position: relative;
+}
+/* End Golabl rules */
+/* start nav  */
+nav .container{
+    display: flex;
+    justify-content: space-around;
+}
+nav img{
+    max-width: 70px;
+    max-height: 70px;
+}
+nav ul{
+    display: flex;
+}
+nav .container > ul > li > a{
+    font-size: 18px;
+    padding: 0 30px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+nav .container > ul > li > a::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background: var(--main-color);
+    position: absolute;
+    top: 0px;
+    overflow: hidden;
+    left: -100%;
+    transition: var(--transition);
+}
+
+nav .container > ul > li > a:hover{
+    background-color: #fafafa;
+    color: var(--main-color);
+}
+nav .container > ul > li > a:hover::before{
+left: 0;
+}
+/* end nav  */
+/* start services-menu */
+.services-menu {
+    position: absolute;
+    min-width: fit-content;
+    top: 70px;
+    left: 0px;
+    opacity: 0;
+    z-index: -10;
+    transition: var(--transition);
+}
+.services-menu ul{
+    flex-direction: column;
+}
+.services-menu ul li{
+position: relative;
+width: 165px;
+background-color: #FAFAFA;
+}
+.services-menu ul li a{
+    font-size: 14px;
+    color: var(--main-color);
+    padding: 15px;
+    display: block;
+}
+.services-menu ul li:not(:last-child){
+    border-bottom: 1px solid #e9e6e9;
+}
+.services-menu ul li:hover{
+    background-color: #ececec;
+}
+nav ul .services:hover .services-menu{
+    display: block;
+    opacity: 1;
+    z-index: 100;
+}
+@media (max-width : 769px) {
+    nav .container > ul > li > a{
+        font-size: 16px;
+        padding: 0 18px;
+    }
+    .services-menu ul li a{
+        font-size: 15px;
+    }
+}
+@media (max-width : 545px) {
+    nav .container{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    nav .container > ul > li > a{
+        padding: 10px;
+        font-size: 14px;
+        height: auto;
+    }
+    .services-menu ul li {
+        width: 100px;
+    }
+    .services-menu ul li a{
+        font-size: 9px;
+    }
+    .services-menu {
+        top: 30px;
+    }
+}
+/* end services-menu */

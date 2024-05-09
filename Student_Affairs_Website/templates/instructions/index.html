@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/instructions/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main/style.css' %}">
+    <link rel="stylesheet" href={% static "css/main/all.min.css" %}>
+    <link rel="stylesheet" href={% static "css/add_announcement/style.css" %}>
+    <link rel="stylesheet" href={% static "css/main/popup.css" %}>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;700;800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <title>
+        Instructions page
+    </title>
+</head>
+
+<body>
+    {% include "includes/nav.html" %}
+    <h1 class="head">
+        Instructions for users
+    </h1>
+    <div class="col">
+        <div class="head1">
+            <h2>How to add a student:</h2>
+            <p>(1) Go to the navigation bar at the top of the page</p>
+            <p>(2) Select "Services".</p>
+            <p>(3) A drop down menu will appear,select "add student option".</p>
+            <p>(4) Fill the required information fields for the new student to be added such as his number , ID ,
+                Name..etc.</p>
+            <p>(5) Press register so that all the student's information will be saved.</p>
+            <p>(6) You must've already an account and logged-In.</p>
+        </div>
+        <div class="head2">
+            <h2>How to Register department :</h2>
+            <p>(1) Go to the navigation bar at the top of the page</p>
+            <p>(2) A drop down menu will appear,Select services.</p>
+            <p>(3) Select Register-Department.</p>
+            <p>(4) Enter student name/ID.</p>
+            <p>(5) Select department.</p>
+            <p>(6) You must've already an account and logged-In.</p>
+            <p>(7) Submit.</p>
+        </div>
+        <div class="head3 maintenance">
+            <h2>How to edit your profile : </h2>
+            <p>Currently Under maintenance</p>
+            <p>(1) Go to the navigation bar at the top of the page.</p>
+            <p>(2) Select "profile" .</p>
+            <p>(3) Select the part you want to edit and make changes on it.(You must've already an account and
+                logged-In).</p>
+            <p>(4) click on button (save changes)</p>
+        </div>
+        <div class="head4">
+            <h2>How to Edit/Delete student:</h2>
+            <p>(1) Go to the navigation bar.</p>
+            <p>(2) A drop down menu will appear,select "services".</p>
+            <p>(3) Select "edit student".</p>
+            <p>(4) Search for active student.</p>
+            <p>(5) Edit student information or delete them.</p>
+            <p>(6) You must've already an account and logged-In.</p>
+
+        </div>
+        <div class="head5">
+            <h2>How to view students:</h2>
+            <p>(1) Go to the navigation bar.</p>
+            <p>(2) A drop down menu will appear,select "services".</p>
+            <p>(3) Select "Students".</p>
+            <p>(4) You can view active students by clicking "Select active" button , non-active ones by
+                clicking"Select not active" or "view all" to view all students .</p>
+            <p>(6) You must've already an account and logged-In.</p>
+        </div>
+        <div class="head6">
+            <h2>How to add announcement:</h2>
+            <p>(1) Go to the navigation bar.</p>
+            <p>(2) A drop down menu will appear,select "services".</p>
+            <p>(3) Select "Add announcement".</p>
+            <p>(4) put down your announcement.</p>
+            <p>(5) You must've already an account and logged-In.</p>
+            <p>(6) Submit it.</p>
+        </div>
+    </div>
+    {% include "../includes/add_announcement.html" %}
+    {% include "../includes/popup.html" %}
+    <script src={% static 'scripts/main/announcement.js' %}></script>
+    <script src={% static 'scripts/main/main.js' %}></script>
+</body>
+
+</html>

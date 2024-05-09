@@ -1,0 +1,15 @@
+{% load static %}
+
+<nav>
+    <div class="container">
+        <a href="{% url 'home' %}"
+            ><img src="{% static 'imgs/logo.png' %}" alt=""
+        /></a>
+        <ul>
+            <li id="home"><a href="{% url 'home' %}">Home</a></li>
+            <li id="login">
+                <a href="{% url 'login' %}">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>

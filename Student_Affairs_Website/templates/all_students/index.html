@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href={% static "css/add_announcement/style.css" %}>
+  <link rel="stylesheet" href={% static "css/main/popup.css" %}>
+  <link rel="stylesheet" href={%static "css/main/all.min.css" %}>
+  <link rel="stylesheet" href={%static "css/main/style.css" %}>
+  <link rel="stylesheet" href={%static "css/all_students/style.css" %}>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;700;800&display=swap" rel="stylesheet">
+  <title>All Students</title>
+</head>
+
+<body>
+  {% include "../includes/nav.html" %}
+  <div class="students">
+    <div class="container">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>GPA</th>
+            <th>Gender</th>
+            <th>Level</th>
+            <th>Status</th>
+            <th>Department</th>
+            <th>E-mail</th>
+            <th>Date of Birth</th>
+            <th>Mobile Number</th>
+          </tr>
+        </thead>
+        <tbody class="body">
+        </tbody>
+      </table>
+      <div class="select-students">
+        <button class="active">Select Active</button>
+        <button class="notActive">Select Not Active</button>
+      </div>
+      <div class="show-all">
+        <button class="showAll">View All</button>
+      </div>
+    </div>
+  </div>
+  <script>
+  </script>
+  {% include "../includes/add_announcement.html" %}
+  {% include "../includes/popup.html" %}
+  <script src={%static 'scripts/all_students/main.js' %}> </script>
+  <script src={% static 'scripts/main/announcement.js' %}></script>
+  <script src={% static 'scripts/main/main.js' %}></script>
+</body>
+
+</html>

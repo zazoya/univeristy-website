@@ -1,0 +1,25 @@
+.announcement .container{
+    padding-bottom: 25px;
+}
+.announcement .heading h2{
+    margin: 35px 0;
+}
+.announcement .box{
+    background-color: #ebf5fa;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+.announcement .box h2{
+    padding: 25px 15px 0px;
+}
+.announcement .box p{
+    padding: 10px 20px 20px;
+    line-height: 2;
+}
+.announcement .important{
+    background-color: transparent;
+    background-color: #f3aeaec7;
+}
+.arabic{
+    direction: rtl;
+}

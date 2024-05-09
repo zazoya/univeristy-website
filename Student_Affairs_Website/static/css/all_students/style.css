@@ -1,0 +1,65 @@
+body{
+    background: #f8fafb;
+}
+.students table{
+    margin: 50px 0 0;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+.students table thead tr{
+    background-color: var(--main-color);
+    color: #ffffff;
+    font-weight: bold;
+}
+.students table th,
+.students table td{
+    padding:15px 12px;
+}
+.students table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+.students table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+    color: var(--main-color);
+}
+.students table tbody tr:last-of-type{
+    border-bottom: 2px solid var(--main-color);
+}
+.delete,
+.update{
+    cursor: pointer;
+}
+/* active buttons  */
+.select-students{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 25px 0;
+}
+.select-students button,
+.show-all button{
+    width: 80%;
+    margin: 0px 10%;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    background: var(--main-color);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.25s;
+}
+.select-students button:hover,
+.show-all button{
+    letter-spacing: 1px;
+    background: #267ec7;
+}
+.show-all{
+    display: flex;
+    justify-content: space-between;
+}

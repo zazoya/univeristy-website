@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta name="description" content="our page to add student" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href={% static "css/add_announcement/style.css" %}>
+    <link rel="stylesheet" href={% static "css/main/all.min.css" %}>
+    <link rel="stylesheet" href={% static "css/main/popup.css" %}>
+    <link rel="stylesheet" href={% static 'css/main/style.css' %}>
+    <link rel="stylesheet" href={% static 'css/add_student/style.css' %} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;700;800&display=swap"
+        rel="stylesheet" />
+    <title>Add student</title>
+</head>
+
+<body>
+    {% include "includes/nav.html" %}
+    <div class="form">
+        <div class="container">
+            <div class="title">Register New Student</div>
+            <br />
+            <form action="#">
+                <div class="userdetalis">
+                    <div class="input-box">
+                        <span class="detalis">Student Name</span>
+                        <input type="text" placeholder="Student Name" id="studentName" />
+                    </div>
+                    <div class="input-box">
+                        <span class="detalis">Id</span>
+                        <input type="text" placeholder="Student Id" id="id" />
+                    </div>
+                    <div class="input-box">
+                        <span class="detalis">Date of birth</span>
+                        <input type="date" id="date" />
+                    </div>
+                    <div class="input-box">
+                        <span class="detalis">Place of birth</span>
+                        <input type="text" id="place" placeholder="Enter the Place of Birth" />
+                    </div>
+                    <div class="input-box">
+                        <span class="detalis">GPA</span>
+                        <input type="text" placeholder="0" id="gpa" />
+                    </div>
+                    <div class="input-box">
+                        <span class="detalis">Total points</span>
+                        <input type="text" placeholder="1000" id="points" />
+                    </div>
+                    <div class="input-box">
+                        <span class="detalis">Level</span>
+                        <input type="text" placeholder="Enter Level" id="level" />
+                    </div>
+                    <div class="input-box">
+                        <span class="detalis">status</span>
+                        <input type="text" placeholder="Active or inactive" id="status" />
+                    </div>
+                    <div class="input-box">
+                        <span class="detalis">Department</span>
+                        <input type="text" placeholder="General" id="dep" />
+                    </div>
+                    <div class="input-box">
+                        <span class="detalis">Entry Year</span>
+                        <input type="text" placeholder="2020" id="year" />
+                    </div>
+                    <div class="input-box">
+                        <span class="detalis">E-mail</span>
+                        <input type="email" placeholder="Enter valid mail" id="email" />
+                    </div>
+                    <div class="input-box">
+                        <span class="detalis">Mobile Phone</span>
+                        <input type="text" placeholder="Enter your number" id="phone" />
+                    </div>
+                    <div class="input-box">
+                        <span class="detalis">Nationality</span>
+                        <input type="text" placeholder="Enter your Nationality" id="nationality" />
+                    </div>
+                    <div class="input-box">
+                        <span class="detalis">National Id</span>
+                        <input type="text" placeholder="Enter your National Id" id="national-id" />
+                    </div>
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot1" />
+                    <input type="radio" name="gender" id="dot2" />
+                    <span class="gender-title">Gender</span>
+                    <div class="category">
+                        <label for="dot1">
+                            <span class="dot one" id="male"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="dot2">
+                            <span class="dot two" id="female"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                    </div>
+                </div>
+                <br />
+                <div class="button">
+                    <!-- <button id="btn" type="button">Register</button> -->
+                    <input value="Register" id='btn' type="button">
+                    <input type="reset" id="reset" />
+                </div>
+            </form>
+        </div>
+    </div>
+    {% include "../includes/add_announcement.html" %}
+    {% include "../includes/popup.html" %}
+    <script src={% static 'scripts/main/announcement.js' %}></script>
+    <script src={%static 'scripts/add_student/main.js' %}> </script>
+    <script src={% static 'scripts/main/main.js' %}></script>
+
+</body>
+
+</html>
